@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Annotation profile for SmartScreen Backend" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="false">
+          <entry name="$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot-configuration-processor/unknown/spring-boot-configuration-processor-unknown.jar" />
+          <entry name="$MAVEN_REPOSITORY$/org/mapstruct/mapstruct-processor/1.5.5.Final/mapstruct-processor-1.5.5.Final.jar" />
+          <entry name="$MAVEN_REPOSITORY$/org/mapstruct/mapstruct/1.5.5.Final/mapstruct-1.5.5.Final.jar" />
+          <entry name="$MAVEN_REPOSITORY$/org/hibernate/orm/hibernate-jpamodelgen/unknown/hibernate-jpamodelgen-unknown.jar" />
+          <entry name="$MAVEN_REPOSITORY$/org/glassfish/jaxb/jaxb-runtime/unknown/jaxb-runtime-unknown.jar" />
+        </processorPath>
+        <module name="provisioning-service" />
+        <module name="fileservice" />
+        <module name="logging-service" />
+        <module name="email-service" />
+      </profile>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="api-gateway" />
+        <module name="gRPC-interface" />
+        <module name="interceptor" />
+        <module name="Registry-Service" />
+        <module name="Interceptor" />
+        <module name="Common" />
+      </profile>
+      <profile name="Annotation profile for Document Storage Backend" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="false">
+          <entry name="$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot-configuration-processor/unknown/spring-boot-configuration-processor-unknown.jar" />
+          <entry name="$MAVEN_REPOSITORY$/org/mapstruct/mapstruct-processor/1.5.5.Final/mapstruct-processor-1.5.5.Final.jar" />
+          <entry name="$MAVEN_REPOSITORY$/org/mapstruct/mapstruct/1.5.5.Final/mapstruct-1.5.5.Final.jar" />
+          <entry name="$MAVEN_REPOSITORY$/org/hibernate/orm/hibernate-jpamodelgen/unknown/hibernate-jpamodelgen-unknown.jar" />
+          <entry name="$MAVEN_REPOSITORY$/org/glassfish/jaxb/jaxb-runtime/unknown/jaxb-runtime-unknown.jar" />
+          <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.18.20/lombok-1.18.20.jar" />
+        </processorPath>
+        <module name="content-management-service" />
+        <module name="authentication-service" />
+      </profile>
+    </annotationProcessing>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="Common" options="-parameters" />
+      <module name="Registry-Service" options="-parameters" />
+      <module name="api-gateway" options="-parameters" />
+      <module name="authentication-service" options="-parameters" />
+      <module name="content-management-service" options="-parameters" />
+      <module name="email-service" options="-parameters" />
+      <module name="fileservice" options="-parameters" />
+      <module name="interceptor" options="" />
+      <module name="logging-service" options="-parameters" />
+      <module name="provisioning-service" options="-parameters" />
+    </option>
+  </component>
+</project>

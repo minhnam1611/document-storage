@@ -1,0 +1,72 @@
+syntax = "proto3";
+package com.vnpt.grpc.proto;
+option java_multiple_files = true;
+option java_package = "com.vnpt.grpcprotocol";
+option java_outer_classname = "AuthGrpcServiceProto";
+
+
+service AuthGrpcService {
+  rpc getUser(UserRequest) returns (UserResponse);
+  rpc getRole(RoleRequest) returns (RoleResponse);
+  rpc getResource(ResourceRequest) returns (ResourceResponse);
+  rpc getUserByToken(GetUserInfoByTokenRequest) returns (GetUserInfoByTokenResponse);
+}
+
+message GetUserInfoByTokenRequest {
+  string token = 1;
+}
+
+message GetUserInfoByTokenResponse {
+  string username = 1;
+  string email = 2;
+  string phone = 3;
+  TenantInfo tenant_info = 4;
+  repeated RoleInfo role_info = 5;
+}
+
+message TenantInfo {
+  string id = 1;
+  string name = 2;
+  string topic = 3;
+}
+
+message RoleInfo {
+  string path = 1;
+  string action = 2;
+}
+message ResourceRequest {
+  int64 id = 1;
+}
+message RoleRequest {
+  int64 id = 1;
+}
+
+message UserRequest {
+  int64 id = 1;
+}
+
+message UserResponse {
+  int64 id = 1;
+  string name = 2;
+  string type = 3;
+  string status = 4;
+  repeated RoleResponse roles = 5;
+}
+
+
+message RoleResponse {
+  int64 id = 1;
+  string name = 2;
+  string code = 3;
+  string description = 4;
+  string status = 5;
+  repeated ResourceResponse grants = 6;
+}
+
+message ResourceResponse {
+  int64 id = 1;
+  string name = 2;
+  string code = 3;
+  string description = 4;
+  repeated string actions = 5;
+}

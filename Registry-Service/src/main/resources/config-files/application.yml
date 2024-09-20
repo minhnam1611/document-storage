@@ -1,0 +1,2 @@
+app:
+  welcomeMsg: ${app.welcomeMsg:From Registry-Service}

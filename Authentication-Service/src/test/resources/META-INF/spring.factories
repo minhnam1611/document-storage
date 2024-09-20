@@ -1,0 +1,3 @@
+org.springframework.test.context.ContextCustomizerFactory = com.vnpt.\
+    authentication.config.SqlTestContainersSpringContextCustomizerFactory,com.\
+    vnpt.authentication.config.RedisTestContainersSpringContextCustomizerFactory
